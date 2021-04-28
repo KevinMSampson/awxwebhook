@@ -1,9 +1,13 @@
 - name: Exploring webhooks
   connection: local
   hosts: localhost
+  gather_facts: yes
   
   tasks:
   - name: print to the screen
     debug:
         msg: "iamKSam's webhook just ran!"
-
+  
+  - name: learn about current host
+    debug:
+        var: ansible_facts
